@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210902 13:08:48.790" rpa="false" schemaversion="2">
+<suite id="s1" name="TC 002" source="C:\Users\david\PycharmProjects\DDT\TestCases\TC_002.robot">
+<test id="s1-t1" name="TC_001 Login Logout Functonality">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${var1}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210902 13:08:49.536" level="INFO">Opening browser 'Chrome' to base url 'https://www.ivoclarvivadent.com/en_US/shop/login?s=true&amp;triggerLogin'.</msg>
+<status status="PASS" starttime="20210902 13:08:49.536" endtime="20210902 13:08:51.940"/>
+</kw>
+<kw name="Read Number of Rows" library="UserKeywords">
+<var>${row}</var>
+<arg>eins</arg>
+<kw name="Fetch Number Of Rows" library="ReadData">
+<var>${maxr}</var>
+<arg>eins</arg>
+<msg timestamp="20210902 13:08:51.941" level="INFO">${maxr} = 22</msg>
+<status status="PASS" starttime="20210902 13:08:51.941" endtime="20210902 13:08:51.941"/>
+</kw>
+<msg timestamp="20210902 13:08:51.941" level="INFO">${row} = 22</msg>
+<status status="PASS" starttime="20210902 13:08:51.940" endtime="20210902 13:08:51.941"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${row}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210902 13:08:51.941" endtime="20210902 13:08:51.942"/>
+</kw>
+<kw name="Read Excel Data of Cell" library="UserKeywords">
+<var>${data}</var>
+<arg>eins</arg>
+<arg>2</arg>
+<arg>2</arg>
+<kw name="Fetch Cell Data" library="ReadData">
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<msg timestamp="20210902 13:08:51.953" level="FAIL">TypeError: '&lt;' not supported between instances of 'str' and 'int'</msg>
+<status status="FAIL" starttime="20210902 13:08:51.943" endtime="20210902 13:08:51.953"/>
+</kw>
+<status status="FAIL" starttime="20210902 13:08:51.942" endtime="20210902 13:08:51.954"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210902 13:08:51.954" endtime="20210902 13:08:51.954"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20210902 13:08:51.955" endtime="20210902 13:08:51.955"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210902 13:08:51.955" endtime="20210902 13:08:51.955"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="gigya-login-form"]/div[2]/div[3]/div[1]/input</arg>
+<arg>testing</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210902 13:08:51.955" endtime="20210902 13:08:51.955"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="gigya-login-form"]/div[2]/div[3]/div[2]/input</arg>
+<arg>seavas123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210902 13:08:51.955" endtime="20210902 13:08:51.956"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="gigya-login-form"]/div[2]/div[3]/div[4]/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210902 13:08:51.956" endtime="20210902 13:08:51.956"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210902 13:08:51.956" endtime="20210902 13:08:51.956"/>
+</kw>
+<status status="FAIL" starttime="20210902 13:08:49.535" endtime="20210902 13:08:51.956">TypeError: '&lt;' not supported between instances of 'str' and 'int'</status>
+</test>
+<status status="FAIL" starttime="20210902 13:08:48.792" endtime="20210902 13:08:51.958"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC 002">TC 002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
